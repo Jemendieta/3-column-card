@@ -1,0 +1,78 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+
+  --Big-shoulders: "Big Shoulders Display", cursive;
+  --Lexend-deca: "Lexend Deca", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+/* en lugar de hacer uso de flexbox, usaremos text-align: center y  display inline block, cuando no tiene espacio suficiente salta a la siguiente linea adoptando el modo responsive*/
+body {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.cards {
+  width: 90%;
+  height: 500px;
+  margin: 200px auto;
+  font-size: 0; /*con esto eliminamos el margin*/
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 300px;
+  height: 100%;
+  padding-top: 3em;
+  padding-left: 2em;
+  font-size: 1rem; /*con esto recuperamos el tamaño del texto*/
+  color: var(--Transparent-white);
+  font-family: var(--Lexend-deca);
+}
+
+.card--orange {
+  background-color: var(--Bright-orange);
+}
+.card--cyan {
+  background-color: var(--Dark-cyan);
+}
+.card--dark-cyan {
+  background-color: var(--Very-dark-cyan);
+}
+
+.card__title {
+  font-family: var(--Big-shoulders);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.card__description {
+  width: 200px;
+}
+
+.card__name {
+  position: absolute;
+  padding: 0.7em 2em;
+  background-color: var(--Very-light-gray);
+  border-radius: 1.2em;
+  text-decoration: none;
+  bottom: 50px;
+}
+
+.card__name--orange {
+  color: var(--Bright-orange);
+}
+.card__name--cyan {
+  color: var(--Dark-cyan);
+}
+.card__name--dark-cyan {
+  color: var(--Very-dark-cyan);
+}
